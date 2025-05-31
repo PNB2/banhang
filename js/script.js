@@ -1,39 +1,35 @@
-document.addEventListener('submit',function(event){
-    const form=event.target;
-    if(form.id==='tv')
-    {
-        event.preventDefault();
-        const username=document.getElementById('ten').value;
-        const tuoi=document.getElementById('age').value;
-        const email=document.getElementById('mail').value;
-        const sodt=document.getElementById('sdt').value;
-        const ghchu=document.getElementById('Ghichu').value;
+function frmValidation(event) {
+  event.preventDefault(); // Ngăn form submit
 
-        const error=document.getElementById('errorMsg');
-        const success=document.getElementById('successMsg');
-        const result=formValid(username,tuoi,email.sodt,ghchu);
+  // Lấy dữ liệu từ form
+  const name = document.getElementById("inputName").value.trim();
+  const phone = document.getElementById("inputphone").value.trim();
+  const email = document.getElementById("inputEmail").value.trim();
+  const note = document.getElementById("exampleFormControlTextarea1").value.trim();
 
-        if(!result.valid)
-        {
-            error.textContent=result.message;
-            success.textContent=' ';
-        }
-        else{
-            error.textContent=' ';
-            success.textContent='Da gui thanh cong. Quy khach vui long doi vai phut!!!';
-            alert("xin cam on quy khach"+username);
-        }
-    }
-});
-function formValid(username, sodt)
-{
-    if(!username||username.trim()===' '||username.includes(' '))
-    {
-        return{valid:false ,message:"ten tu nguoi dung khong de trong hoac rong..."};
-    }
-    if(!sodt||sodt.length<=10)
-    {
-        return{valid:false, message:"dien so dien thoai duoi khong vuot qua 10 so"};
-    }
-    return true;
+  // Lấy giới tính được chọn
+  const gender = document.querySelector('input[name="gridRadios"]:checked')?.nextElementSibling.textContent.trim();
+
+  // Kiểm tra cơ bản
+  if (!name || !phone || !note) {
+    alert("Vui lòng điền đầy đủ thông tin bắt buộc (Tên, SĐT, Ghi chú).");
+    return;
+  }
+
+  // Thêm dòng mới vào bảng
+  const tableBody = document.querySelector("#myTable tbody");
+  const newRow = document.createElement("tr");
+
+  newRow.innerHTML = `
+    <td>${name}</td>
+    <td>${phone}</td>
+    <td>${email}</td>
+    <td>${note}</td>
+    <td>${gender}</td>
+  `;
+
+  tableBody.appendChild(newRow);
+
+  // Xóa nội dung form
+  document.getElementById("myform").reset();
 }
