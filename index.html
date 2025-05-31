@@ -3,183 +3,192 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TECH SHOP</title>
-    <!-- Latest compiled and minified CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <!-- Latest compiled JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>12Tech</title>
+    <!-- bootstrap5 -->
+    <link rel="stylesheet" href="bootstrap-5.3.6-dist/css/bootstrap.min.css" />
+    <script src="bootstrap-5.3.6-dist/js/bootstrap.bundle.min.js"></script>
+    <!-- css -->
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="./fonts/themify-icons/themify-icons.css" />
+    <!-- icon -->
+    <link rel="stylesheet" href="fonts/themify-icons/themify-icons.css" />
+    <!-- seo -->
+    <meta
+      name="description"
+      content="12Tech - Your destination for the latest tech products like phones and smartwatches."
+    />
+    <meta name="keywords" content="12Tech, phones, smartwatches, technology" />
   </head>
   <body>
     <header>
-      <div class="container-fluid mt-3">
-        <h2 class="text-center">12Tech</h2>
-        <br />
-        <!-- Nav pills -->
-        <ul class="nav nav-pills justify-content-center fsize" role="tablist">
+      <!-- navbar -->
+      <nav class="container">
+        <ul class="nav justify-content-center mt-4">
           <li class="nav-item">
-            <a class="nav-link active" data-bs-toggle="pill" href="/index.html">Home</a>
+            <a class="nav-link" href="index.html">Home</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-toggle="pill" href="/products.html">Products</a>
-            <!-- dropdown -->
+            <a
+              class="nav-link dropdown-toggle"
+              data-bs-toggle="dropdown"
+              href="products.html"
+              >Products</a
+            >
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#"><i class="ti-mobile"></i>Phone</a></li>
-                <li><a class="dropdown-item" href="#"><i class="ti-headphone-alt"></i>Watch</a></li>
-                <li><a class="dropdown-item" href="#"><i class="ti-desktop"></i>Another</a></li>
+              <li>
+                <a class="dropdown-item" href="products.html">
+                  <i class="ti-mobile"></i>
+                  Phone</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="watchs.html">
+                  <i class="ti-headphone"></i>
+                  Watchs
+                </a>
+              </li>
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="pill" href="/contact.html">Contact</a>
+            <a class="nav-link" href="contact.html">Contact</a>
           </li>
         </ul>
-      </div>
-      <!-- SLIDER -->
+      </nav>
       <!-- Carousel -->
       <div id="demo" class="carousel slide" data-bs-ride="carousel">
         <!-- Indicators/dots -->
         <div class="carousel-indicators">
-          <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-          <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-          <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+          <button
+            type="button"
+            data-bs-target="#demo"
+            data-bs-slide-to="0"
+            class="active"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#demo"
+            data-bs-slide-to="1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#demo"
+            data-bs-slide-to="2"
+          ></button>
         </div>
 
         <!-- The slideshow/carousel -->
-        <div class="carousel-inner mt-3">
+        <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="img/slider/iphone14.webp" alt="iphone14" class="d-block" style="width: 100%; height:675px"/>
-            <div class="carousel-caption">
-              <h3>iphone14</h3>
-            </div>
+            <img
+              src="img/honor/honor-x8c-white.jpg"
+              alt="honor"
+              class="d-block img-slider"
+            />
           </div>
           <div class="carousel-item">
             <img
-              src="img/slider/honor-x8c-white.jpg" alt="honor-x8c-white" class="d-block" style="width: 100%; height:675px"/>
-            <div class="carousel-caption">
-                <h2>honor-x8c-white</h2>
-            </div>
+              src="img/realme/realme-c67-xanh.jpg"
+              alt="Chicago"
+              class="d-block img-slider"
+            />
           </div>
           <div class="carousel-item">
-            <img src="img/slider/samsung-galaxy-a25-vang-3.jpg" alt="samsung-galaxy-a25-vang-3" class="d-block" style="width: 100%; height:675px"/>
-            <div class="carousel-caption">
-              <h3>samsung-galaxy-a25-vang-3</h3>
-            </div>
+            <img
+              src="img/iphone/iphone-16.jpg"
+              alt="New York"
+              class="d-block img-slider"
+            />
           </div>
         </div>
 
         <!-- Left and right controls/icons -->
         <button
-          class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#demo"
+          data-bs-slide="prev"
+        >
           <span class="carousel-control-prev-icon"></span>
         </button>
         <button
-          class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#demo"
+          data-bs-slide="next"
+        >
           <span class="carousel-control-next-icon"></span>
         </button>
       </div>
     </header>
-    <main>
-        <!-- PRODUCTS -->
-        <div class="container-fluid mt-5 products">
-            <h2 class="text-center">Products</h2>
-            <div class="row">
-                <div class="col">
-                    <h2 class="heading">36.890.000đ</h2>
-                    <img src="img/iphone/iphone-16-pro-max.jpg" alt="">
-                    <div class="content-body">
-                        <h2>Điện thoại iPhone 16 Pro Max 512GB</h2>
-                    </div>
-                </div>
-                <div class="col">
-                    <h2 class="heading">36.890.000đ</h2>
-                    <img src="img/iphone/iphone-16-pro-max.jpg" alt="">
-                    <div class="content-body">
-                        <h2>Điện thoại iPhone 16 Pro Max 512GB</h2>
-                    </div>
-                </div>
-                <div class="col">
-                    <h2 class="heading">36.890.000đ</h2>
-                    <img src="img/iphone/iphone-16-pro-max.jpg" alt="">
-                    <div class="content-body">
-                        <h2>Điện thoại iPhone 16 Pro Max 512GB</h2>
-                    </div>
-                </div>
-                <div class="col">
-                    <h2 class="heading">36.890.000đ</h2>
-                    <img src="img/iphone/iphone-16-pro-max.jpg" alt="">
-                    <div class="content-body">
-                        <h2>Điện thoại iPhone 16 Pro Max 512GB</h2>
-                    </div>
-                </div>
+    <main class="mt-5" id="main">
+      <!-- row1-->
+      <div class="card mt-4">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="img/iphone/iphone-16-pro-max.jpg" class="card-img-top" alt="imgphone" />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">43,090,000 VND</h5>
+              <p class="card-text">
+                IPhone 16 Pro Max 512GB
+              </p>
+              <p>Experience the pinnacle of smartphone innovation with the iPhone 16 Pro Max. Its cutting-edge performance and sleek design redefine mobile luxury—perfect for power users and style seekers alike.</p>
+               <a href="/12products/ip.html" class="btn btn-info">Buy now</a>
             </div>
-            <div class="row">
-                <div class="col">
-                    <h2 class="heading">36.890.000đ</h2>
-                    <img src="img/iphone/iphone-16-pro-max.jpg" alt="">
-                    <div class="content-body">
-                        <h2>Điện thoại iPhone 16 Pro Max 512GB</h2>
-                    </div>
-                </div>
-                <div class="col">
-                    <h2 class="heading">36.890.000đ</h2>
-                    <img src="img/iphone/iphone-16-pro-max.jpg" alt="">
-                    <div class="content-body">
-                        <h2>Điện thoại iPhone 16 Pro Max 512GB</h2>
-                    </div>
-                </div>
-                <div class="col">
-                    <h2 class="heading">36.890.000đ</h2>
-                    <img src="img/iphone/iphone-16-pro-max.jpg" alt="">
-                    <div class="content-body">
-                        <h2>Điện thoại iPhone 16 Pro Max 512GB</h2>
-                    </div>
-                </div>
-                <div class="col">
-                    <h2 class="heading">36.890.000đ</h2>
-                    <img src="img/iphone/iphone-16-pro-max.jpg" alt="">
-                    <div class="content-body">
-                        <h2>Điện thoại iPhone 16 Pro Max 512GB</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <h2 class="heading">36.890.000đ</h2>
-                    <img src="img/iphone/iphone-16-pro-max.jpg" alt="">
-                    <div class="content-body">
-                        <h2>Điện thoại iPhone 16 Pro Max 512GB</h2>
-                    </div>
-                </div>
-                <div class="col">
-                    <h2 class="heading">36.890.000đ</h2>
-                    <img src="img/iphone/iphone-16-pro-max.jpg" alt="">
-                    <div class="content-body">
-                        <h2>Điện thoại iPhone 16 Pro Max 512GB</h2>
-                    </div>
-                </div>
-                <div class="col">
-                    <h2 class="heading">36.890.000đ</h2>
-                    <img src="img/iphone/iphone-16-pro-max.jpg" alt="">
-                    <div class="content-body">
-                        <h2>Điện thoại iPhone 16 Pro Max 512GB</h2>
-                    </div>
-                </div>
-                <div class="col">
-                    <h2 class="heading">36.890.000đ</h2>
-                    <img src="img/iphone/iphone-16-pro-max.jpg" alt="">
-                    <div class="content-body">
-                        <h2>Điện thoại iPhone 16 Pro Max 512GB</h2>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+      </div>
+      <!-- row2 -->
+      <div class="card mt-4">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="img/oppo/oppo-a3x-xanh.jpg" class="card-img-top" alt="imgphone" />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">4.690.000VND</h5>
+              <p class="card-text">
+               Oppo A3X 128GB
+              </p>
+              <p>Discover a phone that keeps up with your lifestyle. The Oppo A3X brings beauty and brains together with seamless speed and captivating visuals.</p>
+               <a href="/12products/opp3.html" class="btn btn-info">Buy now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- row3 -->
+      <div class="card mt-4">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="img/samsung/samsung-galaxy-a56-xam.jpg" class="card-img-top" alt="imgphone" />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">8.490.000VND</h5>
+              <p class="card-text">
+                Samsung Galaxy A56
+              </p>
+              <p>With a vibrant display and powerful performance, the Galaxy A56 is built for entertainment, gaming, and staying connected in style.</p>
+               <a href="/12products/sam56.html" class="btn btn-info">Buy now</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
-    <footer>
-        footer
+    <footer class="bg-light text-center py-4 mt-5">
+      <div class="row">
+        <div class="col">
+          Email: user@gmail.com
+        </div>
+        <div class="col">
+          Phone number: 0977 888 777
+        </div>
+        <div class="col">
+          <i class="ti-youtube"></i>
+          <i class="ti-facebook"></i>
+        </div>
+      </div>
+      <p>&copy; 2025 12Tech. All rights reserved.</p>
     </footer>
   </body>
 </html>
