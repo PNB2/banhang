@@ -19,10 +19,10 @@
     <meta name="keywords" content="12Tech, phones, smartwatches, technology" />
   </head>
   <body>
-    <header>
+    <header class="mt-5">
       <!-- navbar -->
-      <nav class="container">
-        <ul class="nav justify-content-center mt-4">
+      <nav class="container-fluid">
+        <ul class="nav justify-content-center">
           <li class="nav-item">
             <a class="nav-link" href="index.html">Home</a>
           </li>
@@ -30,20 +30,20 @@
             <a
               class="nav-link dropdown-toggle"
               data-bs-toggle="dropdown"
-              href="products.html"
+              href="#"
               >Products</a
             >
             <ul class="dropdown-menu">
               <li>
-                <a class="dropdown-item" href="products.html">
+                <a class="dropdown-item" href="phones.html">
                   <i class="ti-mobile"></i>
-                  Phone</a
+                  Phones</a
                 >
               </li>
               <li>
-                <a class="dropdown-item" href="watchs.html">
+                <a class="dropdown-item" href="watches.html">
                   <i class="ti-headphone"></i>
-                  Watchs
+                  Watches
                 </a>
               </li>
             </ul>
@@ -79,22 +79,22 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img
-              src="img/honor/honor-x8c-white.jpg"
+              src="img/honor/honor_x8c_12_b04dc445a1.jpg"
               alt="honor"
               class="d-block img-slider"
             />
           </div>
           <div class="carousel-item">
             <img
-              src="img/realme/realme-c67-xanh.jpg"
-              alt="Chicago"
+              src="img/realme/thiet-ke-realme-c67-8gb-128gb.jpg"
+              alt="Realme-c67"
               class="d-block img-slider"
             />
           </div>
           <div class="carousel-item">
             <img
-              src="img/iphone/iphone-16.jpg"
-              alt="New York"
+              src="img/iphone/iphone16plus.webp"
+              alt="iphone16plus"
               class="d-block img-slider"
             />
           </div>
@@ -122,9 +122,9 @@
     <main class="mt-5" id="main">
       <!-- row1-->
       <div class="card mt-4">
-        <div class="row no-gutters">
+        <div class="row g-0">
           <div class="col-md-4">
-            <img src="img/iphone/iphone-16-pro-max.jpg" class="card-img-top" alt="imgphone" />
+            <img src="img/iphone/iphone-16.jpg" class="card-img-top" alt="imgphone" />
           </div>
           <div class="col-md-8">
             <div class="card-body">
@@ -132,7 +132,7 @@
               <p class="card-text">
                 IPhone 16 Pro Max 512GB
               </p>
-              <p>Experience the pinnacle of smartphone innovation with the iPhone 16 Pro Max. Its cutting-edge performance and sleek design redefine mobile luxury—perfect for power users and style seekers alike.</p>
+              <p class="card-text">Experience the pinnacle of smartphone innovation with the iPhone 16 Pro Max. Its cutting-edge performance and sleek design redefine mobile luxury—perfect for power users and style seekers alike.</p>
                <a href="/12products/ip.html" class="btn btn-info">Buy now</a>
             </div>
           </div>
@@ -150,7 +150,7 @@
               <p class="card-text">
                Oppo A3X 128GB
               </p>
-              <p>Discover a phone that keeps up with your lifestyle. The Oppo A3X brings beauty and brains together with seamless speed and captivating visuals.</p>
+              <p class="card-text">Discover a phone that keeps up with your lifestyle. The Oppo A3X brings beauty and brains together with seamless speed and captivating visuals.</p>
                <a href="/12products/opp3.html" class="btn btn-info">Buy now</a>
             </div>
           </div>
@@ -168,27 +168,36 @@
               <p class="card-text">
                 Samsung Galaxy A56
               </p>
-              <p>With a vibrant display and powerful performance, the Galaxy A56 is built for entertainment, gaming, and staying connected in style.</p>
+              <p class="card-text">With a vibrant display and powerful performance, the Galaxy A56 is built for entertainment, gaming, and staying connected in style.</p>
                <a href="/12products/sam56.html" class="btn btn-info">Buy now</a>
             </div>
           </div>
         </div>
       </div>
     </main>
-    <footer class="bg-light text-center py-4 mt-5">
+    <footer class="mt-5 p-4 bg-light">
       <div class="row">
-        <div class="col">
-          Email: user@gmail.com
-        </div>
-        <div class="col">
+        <div class="col-5">
+          Email: user@gmail.com <br>
           Phone number: 0977 888 777
+          <div class="row-4 contact-icon">
+            <a href="#"><i class="ti-youtube"></i></a>
+            <a href="#"><i class="ti-facebook"></i></a>
+          </div>
         </div>
-        <div class="col">
-          <i class="ti-youtube"></i>
-          <i class="ti-facebook"></i>
-        </div>
+        <div class="col submenu fs-5 fw-bold">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="phones.html">Phones</a></li>
+              <li><a href="watches.html">Watches</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
       </div>
-      <p>&copy; 2025 12Tech. All rights reserved.</p>
-    </footer>
+      <hr>
+      <div class="row text-center">
+        <p>&copy; 2025 12Tech. All rights reserved.</p>
+      </div>
+  </footer>
   </body>
 </html>

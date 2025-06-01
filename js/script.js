@@ -1,35 +1,34 @@
-function frmValidation(event) {
-  event.preventDefault(); // Ngăn form submit
+document.getElementById('myform').addEventListener('submit', function(event){
+    const username = document.getElementById('inputName').value;
+    const email = document.getElementById('inputEmail3').value;
+    const sodt = document.getElementById('inputphone').value;   
+    const note = document.getElementById('exampleFormControlTextarea1').value;
 
-  // Lấy dữ liệu từ form
-  const name = document.getElementById("inputName").value.trim();
-  const phone = document.getElementById("inputphone").value.trim();
-  const email = document.getElementById("inputEmail").value.trim();
-  const note = document.getElementById("exampleFormControlTextarea1").value.trim();
+    // Simple test
+    if (!username) {
+        alert('Name cannot be empty.');
+        event.preventDefault();
+        return;
+    }
 
-  // Lấy giới tính được chọn
-  const gender = document.querySelector('input[name="gridRadios"]:checked')?.nextElementSibling.textContent.trim();
+    if (!sodt || isNaN(sodt) || sodt.length !== 10) {
+        alert('Phone number must be numeric and 10 digits long.');
+        event.preventDefault();
+        return;
+    }
 
-  // Kiểm tra cơ bản
-  if (!name || !phone || !note) {
-    alert("Vui lòng điền đầy đủ thông tin bắt buộc (Tên, SĐT, Ghi chú).");
-    return;
-  }
+    if (!email || email.indexOf('@') === -1 || email.indexOf('.') === -1) {
+        alert('Invalid email address.');
+        event.preventDefault();
+        return;
+    }
 
-  // Thêm dòng mới vào bảng
-  const tableBody = document.querySelector("#myTable tbody");
-  const newRow = document.createElement("tr");
+    if (!note) {
+        alert('Note cannot be empty.');
+        event.preventDefault();
+        return;
+    }
 
-  newRow.innerHTML = `
-    <td>${name}</td>
-    <td>${phone}</td>
-    <td>${email}</td>
-    <td>${note}</td>
-    <td>${gender}</td>
-  `;
-
-  tableBody.appendChild(newRow);
-
-  // Xóa nội dung form
-  document.getElementById("myform").reset();
-}
+    // If all is valid, the form will be submitted normally to process.php
+    // Don't call event.preventDefault() anymore => the form will send data to the server
+});
